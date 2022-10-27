@@ -11,9 +11,15 @@
 </head>
 
 <body>
-    <h1>Skills</h1>
+    <h1>Skills as of
+        <%= time %>
+    </h1>
     <ul>
         <% skills.forEach(function(s) { %>
+            <li>
+                <form action="/skills/<%= s.id %>?_method=DELETE" class="delete-form" method="POST">
+                    <button type="submit">X</button>
+            </li>
             <li>
                 <a href="/skills/<%= s.id%>">
                     <%= s.skill %>
@@ -24,6 +30,7 @@
             </li>
             <% }); %>
     </ul>
+    <a href="/skills/new">Add Skill</a>
 </body>
 
 </html>
