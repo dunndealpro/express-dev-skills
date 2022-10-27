@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main-one.css">
+</head>
+
+<body>
+
+    <h1>Edit Skill</h1>
+    <p>
+        <%= skill.skill %>
+    </p>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+        <label for="skill-input">Skill: </label>
+        <input id="skill-input" type="text" placeholder="enter skill here" name="skill" value="<%= skill.skill %>">
+
+        <label for="have-input">Have?</label>
+        <input id="have-input" type="text" placeholder="false" name="have" value="<%= skill.have %>">
+        <button type="submit">Save Edit</button>
+    </form>
+</body>
+
+</html>
