@@ -8,8 +8,7 @@ module.exports = {
     create,
     delete: deleteSkill,
     edit,
-    update,
-
+    update
 };
 
 function index(req, res) {
